@@ -3,7 +3,7 @@
         {
             "label": "Create Dir",
             "type": "shell",
-            "command": "mkdir ${workspaceFolder}/bin/${relativeFileDirname} -Force",
+            "command": "mkdir bin/${relativeFileDirname} -Force",
             "group": "build",
             "detail": "Create Dir"
         },
