@@ -10,7 +10,7 @@
         {
             "label": "Build cl.exe",
             "type": "shell",
-            "command": "cl",
+            "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/${config:MSVC_VER}/bin/Hostx64/x64/cl.exe",
             "args": [
                 "/EHsc",
                 "/nologo",
@@ -21,15 +21,15 @@
                 "/Fo:",
                 "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.obj",
                 "/I",
-                "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/include",
+                "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/${config:MSVC_VER}/include",
                 "/I",
-                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um",
+                "C:/Program Files (x86)/Windows Kits/10/Include/${config:WINSDK_VER}/um",
                 "/I",
-                "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/ucrt",
+                "C:/Program Files (x86)/Windows Kits/10/Include/${config:WINSDK_VER}/ucrt",
                 "/link",
-                "/LIBPATH:C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/lib/onecore/x64",
-                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64",
-                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/ucrt/x64"
+                "/LIBPATH:C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/${config:MSVC_VER}/lib/onecore/x64",
+                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/${config:WINSDK_VER}/um/x64",
+                "/LIBPATH:C:/Program Files (x86)/Windows Kits/10/Lib/${config:WINSDK_VER}/ucrt/x64"
             ],
             "options": {
                 "cwd": "${fileDirname}"
