@@ -1,13 +1,6 @@
 {
     "tasks": [
         {
-            "label": "Create Dir",
-            "type": "shell",
-            "command": "mkdir bin/${relativeFileDirname} -Force",
-            "group": "build",
-            "detail": "Create Dir"
-        },
-        {
             "label": "Build cl.exe",
             "type": "shell",
             "command": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/${config:MSVC_VER}/bin/Hostx64/x64/cl.exe",
@@ -41,11 +34,6 @@
             },
             
             "detail": "Build EXE"
-        },
-        {
-            "label": "Run Build",
-            "dependsOrder": "sequence",
-            "dependsOn": ["Create Dir", "Build cl.exe"],
         }
     ],
     "version": "2.0.0"

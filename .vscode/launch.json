@@ -11,7 +11,7 @@
             "program": "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
-            "preLaunchTask": "Run Build",
+            "preLaunchTask": "Build cl.exe",
             "console": "integratedTerminal"
         }
     ]
