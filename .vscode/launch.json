@@ -8,7 +8,7 @@
             "name": "MSVC로 빌드",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Build cl.exe",
