@@ -2,6 +2,8 @@
 
 VS Code 에서 GCC 컴파일러를 사용하여 디버깅 하는 템플릿
 
+윈도우 & 리눅스 상호 운용 가능
+
 ## 사용법
 
 ### default / with-dir 폴더 차이점
@@ -38,7 +40,7 @@ VS Code 에서 GCC 컴파일러를 사용하여 디버깅 하는 템플릿
 #### 리눅스
 
 ```bash
-sudo apt install gcc
+sudo apt install gcc gdb
 ```
 
 ### 라이브러리 추가
