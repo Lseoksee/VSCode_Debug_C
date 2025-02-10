@@ -1,0 +1,39 @@
+{
+    "tasks": [
+        {
+            "label": "Create Dir",
+            "type": "shell",
+            "command": "mkdir bin/${relativeFileDirname} -Force",
+            "group": "build",
+            "detail": "Create Dir"
+        },
+        {
+            "type": "shell",
+            "label": "Build GCC",
+            "command": "gcc",
+            // 컴파일 옵션
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/bin/${relativeFileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build EXE"
+        },
+        {
+            "label": "Run Build",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Create Dir", "Build GCC"],
+        }
+    ],
+    "version": "2.0.0"
+}

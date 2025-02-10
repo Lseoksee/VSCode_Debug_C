@@ -1,0 +1,27 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build GCC",
+            "command": "gcc",
+            // 컴파일 옵션
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build EXE"
+        }
+    ],
+    "version": "2.0.0"
+}
